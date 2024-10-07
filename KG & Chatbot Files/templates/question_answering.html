@@ -1,0 +1,283 @@
+{% extends "navigate.html" %} {% block mainbody %}
+    <script src="/static/js/echarts.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!--overview start-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="page-header" style="font-weight:bolder;"><i class="icon_chat_alt" style="font-weight:bolder;"></i> Medical Q&A </h3>
+                        <ol class="breadcrumb">
+                            <li><i class="fa fa-home"></i><a href="\">Home</a></li>
+                            <li><i class="icon_chat_alt"></i>Medical Q&A</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <section class="panel panel-default">
+                    <header class="panel-heading">
+                        input question :
+                    </header>
+                    <div class="panel-body">
+                        <form class="form-inline" method="get">
+                            <div class="form-row">
+                                <div class="form-group col-md-10">
+                                    <input type="text" name="question" id="question" class="form-control" placeholder="Enter text"> </input>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <button type="submit" class="btn btn-primary btn-block"> submit</button>
+                                </div>
+                            </div>
+                            <br/><br/>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <p> 
+                                    <ul>
+                                        <h3 style="font-weight:bolder;">Popular Searches:</h3> 
+                                        <li><a href="#" onclick="$('#question').attr('value','What are the symptoms of whooping cough？')">What are the symptoms of whooping cough? </a> &nbsp;&nbsp; </li>
+                                        <li><a href="#" onclick="$('#question').attr('value','I have the following symptoms:Headache, dizzyness？')">I have the following symptoms:Headache, dizzyness？</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','What is the problem with frequent nasal congestion and sneezing?')">What is the problem with frequent nasal congestion and sneezing ？</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','What is the problem with bitter mouth, dry mouth, and thirsty mouth?？')">What is the problem with bitter mouth, dry mouth, and thirsty mouth?？</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','What are dry eyes and blurred vision？')">What are dry eyes and blurred vision？</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','what are the causes of cancer ？')">what are the causes of cancer ?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','What medicine is recommended for children with a lung cancer?')">What medicine is recommended for children with a cold?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','What are the complications of diabetes?')">What are the complications of diabetes?</a>&nbsp;</li>
+                                        <li><a href="#" onclick="$('#question').attr('value','What food should I avoid in smallpox?')">What should I avoid in diabetes?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','What diseases can cauliflower treat?')">What diseases can cauliflower treat?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','What diseases can Crispy fried chicken thighs treat?')">What diseases can Ganmaoling Granules treat?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','What is the probability that cancer can be cured?')">What is the cause of a cold?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','How to treat high blood pressure?')">How to treat high blood pressure?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','How to prevent lung cancer?')">How to prevent high blood pressure?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','what Susceptible population easily gets cancer?')">what Susceptible population easily gets cancer?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value','Can Leukemia be cured?')">Can Leukemia be cured?</a></li>
+                                        <li><a href="#" onclick="$('#question').attr('value',':what kind of tests should i make to check for cancer?')">:what kind of tests should i make to check for cancer?</a></li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="panel panel-default">
+                    <header class="panel-heading">
+                        answer :
+                    </header>
+                    <div class="panel-body">
+                        <div class="form-group col-md-10">
+                            <div class="col-sm-10">
+                                <p id="txt" class="navbar-text">Answers to questions will appear here</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <button type="button" class="btn btn-default btn-block" data-container="body" data-toggle="popover" data-placement="top" data-content="1. When describing multiple symptoms, please use commas to separate them. 2. Please enter the question you want to query. etc.
+3. Query example:
+1. What are the symptoms of breast cancer?
+2. What is the problem with a runny nose?
+3. Why do some people suffer from insomnia?
+4. What are the complications of insomnia?
+5. What should people with insomnia not eat?
+6. What to eat when you have tinnitus?
+7. Who should not eat honey?
+8. What diseases can Banlangen cure?
+9. How can meningitis be detected?
+10. What kind of medicine should I take for liver disease?
+11. What are the benefits of goose meat?
+12. What can be detected by complete blood count?
+13. How can we prevent kidney deficiency?
+14. How long does it take to recover from a cold?
+15. How to treat high blood pressure?
+16. Can leukemia be cured?
+17. Who is prone to high blood pressure?
+18. What is diabetes?">
+help
+                            </button>
+                        </div>
+
+
+                        <div class="form-group col-md-2">
+                            <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                error correction feedback <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Entity recognition error</a></li>
+                                <li><a href="#">Misidentification of intent</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">other</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </section>
+
+                <div class="row">
+                    {% if ctx %}
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <header class="panel-heading">
+                                    <div class="panel-body">
+                                        <h2>No matching answers found yet</h2>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if ret %}
+                        <div class="col-md-4">
+                            <section class="panel panel-default">
+                                <header class="panel-heading">
+                                    Answer:
+                                </header>
+                                <div class="panel-body">
+                                    <table class="table" data-paging="true" data-sorting="true" data-paging-size="10"></table>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-md-8">
+                            <section class="panel panel-default">
+                                <header class="panel-heading">
+                                    Map display:
+                                </header>
+                                <div class="panel-body">
+                                    <div id="graph" style="width: 100%;height:600px;"></div>
+                                </div>
+                            </section>
+                        </div>
+                    {% endif %}
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
+
+    {% if ret %}
+        <script type="text/javascript">
+            var ret_dict = [{{ret|safe}}];
+            answer_txt = ret_dict[0]['answer_txt']
+            tableData = [];
+            for (var i = 0; i < ret_dict[0]['answer'].length; i++) {
+                answer = {};
+                answer['answer'] = ret_dict[0]['answer'][i];
+                tableData.push(answer)
+            }
+
+            jQuery(function () {
+                $('.table').footable({
+                    "columns": [{"name": "answer", title: "Answer"}],
+                    "rows": tableData
+                });
+                $("#txt").text(answer_txt); //hzp add
+                $(function () {
+                    $('[data-toggle="popover"]').popover()
+                })
+            });
+            var data = [];
+            var links = [];
+
+            let set = new Set();
+            for (var i = 0; i < ret_dict[0]['list'].length; i++) {
+                s = ret_dict[0]['list'][i]['source']['name'];
+                t = ret_dict[0]['list'][i]['target']['name'];
+                rel_type = ret_dict[0]['list'][i]['type'];
+
+                source_node = {};
+                if (set.has(s) == false) {
+                    set.add(s);
+                    source_node['name'] = s;
+                    source_node['draggable'] = true;  
+                    data.push(source_node);
+                }
+
+                target_node = {};
+                if (set.has(t) == false) {
+                    set.add(t);
+                    target_node['name'] = t;
+                    target_node['draggable'] = true;   //
+                    data.push(target_node);
+                }
+
+
+                relation = {};
+                relation['source'] = s;
+                relation['target'] = t;
+                relation['value'] = rel_type;
+                relation['symbolSize'] = 10
+
+                links.push(relation);
+            }
+
+            var myChart = echarts.init(document.getElementById('graph'));
+
+            option = {
+                title: {
+                    text: ''
+                },
+                tooltip: {},
+                animationDurationUpdate: 1500,
+                animationEasingUpdate: 'quinticInOut',
+                label: {
+                    normal: {
+                        show: true,
+                        textStyle: {
+                            fontSize: 12
+                        },
+                    }
+                },
+                legend: {
+                    x: "center",
+                    show: false
+                },
+                series: [
+
+                    {
+                        type: 'graph',
+                        layout: 'force',
+                        symbolSize: 45,
+                        focusNodeAdjacency: true,
+                        roam: true,
+                        edgeSymbol: ['none', 'arrow'],
+                        label: {
+                            normal: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: 12,
+                                },
+                            }
+                        },
+                        force: {
+                            repulsion: 1000
+                        },
+                        edgeSymbolSize: [4, 50],
+                        edgeLabel: {
+                            normal: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: 10
+                                },
+                                formatter: "{c}"
+                            }
+                        },
+                        data: data,
+                        links: links,
+                        lineStyle: {
+                            normal: {
+                                opacity: 0.9,
+                                width: 1.3,
+                                curveness: 0,
+                                color: "#262626",
+                            }
+                        }
+                    }
+                ]
+            };
+            myChart.setOption(option);
+        </script>
+    {% endif %}
+
+{% endblock %}

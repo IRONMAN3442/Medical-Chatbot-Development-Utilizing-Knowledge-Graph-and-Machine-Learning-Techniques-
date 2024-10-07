@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical ChatBot</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <title>BRADENGELHARDT</title>
+    <meta name="description" content="Web designer and front-end developer">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,200,400,600' rel='stylesheet' type='text/css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.4/jquery.fullPage.min.js"></script>
+    <script src="https://kit.fontawesome.com/55fe3f3f4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css">
+</head>
+<body>
+    <body>
+        <!-- navbar header -->
+        <div class="nav-header">
+          <div class="nav-brand">
+            <img src="static/black.png">
+          </div>
+          <i class="fa fa-bars fa-3x"></i>
+          <div class="header-links">
+            <ul>
+              <li data-menuanchor="fourthPage"><a href="#contact"></a></li>
+              <li data-menuanchor="thirdPage"><a href="#portfolio">NEO4J Graphs</a></li>
+              <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- end navbar header -->
+      
+        <!-- sidebar slider -->
+        <div class="nav-screen">
+          <i class="fa fa-times fa-3x"></i>
+          <div class="nav-container">
+            <div class="nav-links">
+              <ul id='myMenu'>
+                <li data-menuanchor="secondPage"><a href="#about">ABOUT</a></li>
+                <li data-menuanchor="thirdPage"><a href="#portfolio">Knowledge Graphs</a></li>
+                <li data-menuanchor="fourthPage"><a href="#contact"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end navbar slider -->
+      
+        <!-- begin fullpage -->
+      
+        <div id="fullpage">
+      
+          <!-- begin section -->
+      
+          <div class="section aboutme" data-anchor="aboutme">
+            <div class="opaque-bg animated fadeInDown">
+              <h1 style="color:Black">MedBot  <span style="color:#FF6363"><i class="fa fa-notes-medical"></i></span> Medical ChatBot</h1>
+              <p><span id="holder"></span><span class="blinking-cursor">|</span></p>
+              <a href="#"><button class="bubbly-button"> Try MedBot's Below</button></a>
+            </div>
+            <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
+          </div>
+          <!-- end section -->
+      
+          <!-- begin section -->
+      
+          <section class="we-offer-area text-center section bg-gray" data-anchor="skills" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="site-heading text-center">
+                            <h2>What can MedBot <span>Do ?</span></h2>
+                            <h4>Tasks Performed By MedBot</h4>
+                        </div>
+                    </div>
+                </div>
+                    <div class="row our-offer-items less-carousel">
+                        <!-- Single Item -->
+                        <div class="col-md-3 col-sm-3 equal-height">
+                            <div class="item">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h4>Analyse User's questions</h4>
+                                <p>
+                                  MedBot analyses the user's text using NLP. Grammar is enhanced for user's questions if it lacks.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+    
+                        <!-- Single Item -->
+                        <div class="col-md-3 col-sm-3 equal-height">
+                            <div class="item">
+                                <i class="fas fa-dharmachakra"></i>
+                                <h4>Parse Questions</h4>
+                                <p>
+                                    MedBot parses the questions and identifies the type of question being asked.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+    
+                        <!-- Single Item -->
+                        <div class="col-md-3 col-sm-3 equal-height">
+                            <div class="item">
+                                <i class="fas fa-tasks"></i>
+                                <h4>Fetching Answers</h4>
+                                <p>
+                                    MedBot fetches answers from the medical knowledge graph based on the question category. 
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+    
+                        <!-- Single Item -->
+                        <div class="col-md-3 col-sm-3 equal-height">
+                            <div class="item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <h4>Knowledge Graph</h4>
+                                <p>
+                                    MedBot is fast because of the graph structure and Cypher Queries are used to fetch through the graph. 
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+    
+                    </div>
+            </div>
+        </section>
+          <!-- end section -->
+      
+          <!-- begin section -->
+      
+          <div class="section" data-anchor="projects">
+            <div class="content-slide">
+              <div class="slide">
+                <h1 class="wow fadeInDown" data-wow-delay="0.2s">Diseases Graph</h1>
+                <p class="wow fadeInDown" data-wow-delay="0.2s">A single disease connected to all of its relational details</p>
+                <img class="wow fadeInUp" data-wow-delay="0.2s" src="static/single_disease.png">
+              </div>
+              <div class="slide">
+                <h1>Relationships graph</h1>
+                <p>Relationship between disease, food-to-eat, and others.</p>
+                <img data-src="static/relations.png">
+              </div>
+              <div class="slide">
+                <h1>KEYWORDS</h1>
+                <p>Search by keywords.</p>
+                <img data-src="static/keywords.png">
+              </div>
+              <div class="slide">
+                <h1>Disease Nodes</h1>
+                <p>Just sample disease Nodes.</p>
+                <img data-src="static/disease.png">
+              </div>
+              <div class="slide">
+                <h1>Database Statistics</h1>
+                <p>Node, relationship, labels count.</p>
+                <img data-src="static/statistics.png">
+              </div>
+              
+            </div>
+          </div>
+          <!-- end section -->
+      
+          <!-- begin section -->
+          
+      
+          <!-- end section -->
+          <!-- Add the chatbot icon to your HTML code -->
+<!-- Add the chatbot icon to your HTML code -->
+        <div id="body"> 
+
+        <div id="chat-circle" class="btn btn-raised">
+              <div id="chat-overlay"></div>
+              <i class="material-icons">speaker_phone</i>
+              
+        </div>
+
+        <div class="chat-box">
+          <div class="chat-box-header">
+            ChatBot
+            <span class="chat-box-toggle"><i class="material-icons">close</i></span>
+          </div>
+          <div class="chat-box-body">
+            <div class="chat-box-overlay">   
+            </div>
+            <div class="chat-logs">
+            
+            </div><!--chat-log -->
+          </div>
+          <div class="chat-input">      
+            <form>
+              <input type="text" id="chat-input" name="input" placeholder="Send a message..."/>
+            <button type="submit" class="chat-submit" id="chat-submit"><i class="material-icons">send</i></button>
+            </form>      
+          </div>
+        </div>
+
+
+
+
+</div>
+
+
+
+
+         
+      
+        </div>
+        <!-- end fullpage -->
+        <script>
+            $(document).ready(function () {
+  // typing animation
+  (function ($) {
+    $.fn.writeText = function (content) {
+      var contentArray = content.split(""),
+        current = 0,
+        elem = this;
+      setInterval(function () {
+        if (current < contentArray.length) {
+          elem.text(elem.text() + contentArray[current++]);
+        }
+      }, 80);
+    };
+  })(jQuery);
+
+  // input text for typing animation
+  $("#holder").writeText("Hi! I am MedBot, a medical chat application designed to answer queries regarding medical information.");
+
+  // initialize wow.js
+  new WOW().init();
+
+  // Push the body and the nav over by 285px over
+  var main = function () {
+    $(".fa-bars").click(function () {
+      $(".nav-screen").animate(
+        {
+          right: "0px"
+        },
+        200
+      );
+
+      $("body").animate(
+        {
+          right: "285px"
+        },
+        200
+      );
+    });
+
+    // Then push them back */
+    $(".fa-times").click(function () {
+      $(".nav-screen").animate(
+        {
+          right: "-285px"
+        },
+        200
+      );
+
+      $("body").animate(
+        {
+          right: "0px"
+        },
+        200
+      );
+    });
+
+    $(".nav-links a").click(function () {
+      $(".nav-screen").animate(
+        {
+          right: "-285px"
+        },
+        500
+      );
+
+      $("body").animate(
+        {
+          right: "0px"
+        },
+        500
+      );
+    });
+  };
+
+  $(document).ready(main);
+
+  // initiate full page scroll
+
+  $("#fullpage").fullpage({
+    scrollBar: true,
+    responsiveWidth: 400,
+    navigation: true,
+    navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
+    anchors: ["home", "about", "portfolio", "contact", "connect"],
+    menu: "#myMenu",
+    fitToSection: false,
+
+    afterLoad: function (anchorLink, index) {
+      var loadedSection = $(this);
+
+      //using index
+      if (index == 1) {
+        /* add opacity to arrow */
+        $(".fa-chevron-down").each(function () {
+          $(this).css("opacity", "1");
+        });
+        $(".header-links a").each(function () {
+          $(this).css("color", "white");
+        });
+        $(".header-links").css("background-color", "transparent");
+      } else if (index != 1) {
+        $(".header-links a").each(function () {
+          $(this).css("color", "black");
+        });
+        $(".header-links").css("background-color", "white");
+      }
+
+      //using index
+    }
+  });
+
+  // move section down one
+  $(document).on("click", "#moveDown", function () {
+    $.fn.fullpage.moveSectionDown();
+  });
+
+  // fullpage.js link navigation
+  $(document).on("click", "#skills", function () {
+    $.fn.fullpage.moveTo(2);
+  });
+
+  $(document).on("click", "#projects", function () {
+    $.fn.fullpage.moveTo(3);
+  });
+
+  $(document).on("click", "#contact", function () {
+    $.fn.fullpage.moveTo(4);
+  });
+
+  // smooth scrolling
+  $(function () {
+    $("a[href*=#]:not([href=#])").click(function () {
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        var target = $(this.hash);
+        target = target.length
+          ? target
+          : $("[name=" + this.hash.slice(1) + "]");
+        if (target.length) {
+          $("html,body").animate(
+            {
+              scrollTop: target.offset().top
+            },
+            700
+          );
+          return false;
+        }
+      }
+    });
+  });
+
+  //ajax form
+  $(function () {
+    // Get the form.
+    var form = $("#ajax-contact");
+
+    // Get the messages div.
+    var formMessages = $("#form-messages");
+
+    // Set up an event listener for the contact form.
+    $(form).submit(function (e) {
+      // Stop the browser from submitting the form.
+      e.preventDefault();
+
+      // Serialize the form data.
+      var formData = $(form).serialize();
+
+      // Submit the form using AJAX.
+      $.ajax({
+        type: "POST",
+        url: $(form).attr("action"),
+        data: formData
+      })
+        .done(function (response) {
+          // Make sure that the formMessages div has the 'success' class.
+          $(formMessages).removeClass("error");
+          $(formMessages).addClass("success");
+
+          // Set the message text.
+          $(formMessages).text(response);
+
+          // Clear the form.
+          $("#name").val("");
+          $("#email").val("");
+          $("#message").val("");
+        })
+        .fail(function (data) {
+          // Make sure that the formMessages div has the 'error' class.
+          $(formMessages).removeClass("success");
+          $(formMessages).addClass("error");
+
+          // Set the message text.
+          if (data.responseText !== "") {
+            $(formMessages).text(data.responseText);
+          } else {
+            $(formMessages).text(
+              "Oops! An error occured and your message could not be sent."
+            );
+          }
+        });
+    });
+  });
+});
+
+var animateButton = function(e) {
+
+e.preventDefault;
+//reset animation
+e.target.classList.remove('animate');
+
+e.target.classList.add('animate');
+setTimeout(function(){
+  e.target.classList.remove('animate');
+},700);
+};
+
+var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+for (var i = 0; i < bubblyButtons.length; i++) {
+bubblyButtons[i].addEventListener('click', animateButton, false);
+}
+
+
+
+
+
+// chatbot
+
+$(function() {
+  var INDEX = 0; 
+  
+  // Greet the customer on page load
+  var greeting = "Hi there! I'm a chatbot. How can I help you today?";
+  setTimeout(function() {      
+    generate_message(greeting, 'user');  
+  }, 1000)
+  
+  $("#chat-submit").click(function(e) {
+    e.preventDefault();
+    var msg = $("#chat-input").val(); 
+    if(msg.trim() == ''){
+      return false;
+    }
+    generate_message(msg, 'self');
+  })
+  
+  function generate_message(msg, type) {
+    INDEX++;
+    var str="";
+    str += "<div id='cm-msg-"+INDEX+"' class=\"chat-msg "+type+"\">";
+    str += "          <span class=\"msg-avatar\">";
+    str += "            <img src=\"" + (type == 'self' ? 'static/user.png' : 'static/bot.png') + "\">";
+    str += "          <\/span>";
+    str += "          <div class=\"cm-msg-text\">";
+    str += msg;
+    str += "          <\/div>";
+    str += "        <\/div>";
+    $(".chat-logs").append(str);
+    $("#cm-msg-"+INDEX).hide().fadeIn(300);
+    if(type == 'self'){
+        // Send user input to Flask API
+        $.ajax({
+            type: "POST",
+            url: "http://127.0.0.1:5000/grammar",
+            data: JSON.stringify({ input: msg }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(response) {
+                // Display response from Flask API
+                generate_message(response.result, 'user');
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+        $("#chat-input").val(''); 
+    }    
+    $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight}, 1000);    
+}
+
+
+  
+  $("#chat-circle").click(function() {    
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+  })
+  
+  $(".chat-box-toggle").click(function() {
+    $("#chat-circle").toggle('scale');
+    $(".chat-box").toggle('scale');
+  })
+  
+})
+
+
+
+
+
+
+
+        </script>
+      </body>
+</body>
+</html>
